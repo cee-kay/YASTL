@@ -1,7 +1,8 @@
 import React from "react";
 import { Container } from "reactstrap";
 
-import TodoList from "./TodoList";
+import TodoList from "../containers/TodoList";
+import AddTask from "../containers/AddTask";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <img alt="" src="icon.png" />Yet Another TodoList
       </h1>
       <TodoList />
+      <AddTask />
     </Container>
   );
 }
