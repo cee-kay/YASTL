@@ -26,6 +26,8 @@ export default (state = initialState, action) => {
         }
         return task;
       });
+    case "CLEAR_ALL":
+      return [];
     default:
       return state;
   }

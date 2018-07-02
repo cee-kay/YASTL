@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Task = ({ id, description, onRemoveClick, onToggleEditorClick }) => (
-  <Row style={{ marginTop: "8px", marginBottom: "8px" }}>
-    <Col xs="6">
+  <Row>
+    <Col sm={{ size: "4", offset: 3 }} className="row-overwrite">
       #{id} {description}
     </Col>
-    <Col xs="6" className="text-right">
+    <Col sm={{ size: "2" }} className="text-right row-overwrite">
       <ButtonGroup>
         <Button outline size="sm" color="info" onClick={onToggleEditorClick}>
           <FontAwesomeIcon size="sm" icon={faPencilAlt} />

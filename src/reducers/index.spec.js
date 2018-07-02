@@ -109,4 +109,18 @@ describe("tasks reducer", () => {
       { description: "New Task 1", id: 1, isInEditMode: true }
     ]);
   });
+
+  it("should handle CLEAR_ALL", () => {
+    expect(
+      tasks(
+        [
+          { description: "New Task 0", id: 0, isInEditMode: true },
+          { description: "New Task 1", id: 1, isInEditMode: false }
+        ],
+        {
+          type: "CLEAR_ALL"
+        }
+      )
+    ).toEqual([]);
+  });
 });

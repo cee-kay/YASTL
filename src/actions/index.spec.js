@@ -35,4 +35,10 @@ describe("Task actions", () => {
     });
   });
 
+  it("clearAll should create an CLEAR_ALL action", () => {
+      expect(actions.clearAll()).toEqual({
+          type: "CLEAR_ALL"
+      })
+  })
+
 });

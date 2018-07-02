@@ -8,6 +8,14 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <title>Yet anonther simple todo list</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <noscript>
+        You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
     <style>
         textarea:focus,
         input:focus {
@@ -24,14 +32,64 @@
             -webkit-box-shadow: none !important;
             box-shadow: none !important;
         }
-    </style>
-</head>
 
-<body>
-    <noscript>
-        You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
+        body {
+            background-color: #f9f9f9;
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 30px;
+        }
+
+        .row-overwrite {
+            background-color: #FFF;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .row:odd .row-overwrite {
+            background-color: #EEE;
+        }
+
+        .row:first-child .row-overwrite {
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .row:last-child .row-overwrite {
+            -webkit-border-bottom-right-radius: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+            -moz-border-radius-bottomright: 5px;
+            -moz-border-radius-bottomleft: 5px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .task-enter {
+            opacity: 0.01;
+            max-height: 0px;
+        }
+
+        .task-enter.task-enter-active {
+            opacity: 1;
+            transition: 500ms;
+            max-height: 100px;
+        }
+
+        .task-exit {
+            opacity: 1;
+            max-height: 100px;
+        }
+
+        .task-exit.task-exit-active {
+            opacity: 0.01;
+            transition: 500ms;
+            max-height: 0px;
+        }
+    </style>
+
 </body>
 
 </html>

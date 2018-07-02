@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import { updateTask, removeTask, toggleEditor } from "../actions";
+import { updateTask, removeTask, toggleEditor, clearAll } from "../actions";
 import TodoList from "../components/TodoList";
 
 const getAllTasks = state => {
@@ -14,7 +14,8 @@ const mapDispatchToProps = dispatch => {
     updateTask: (id, updatedDescription) =>
       dispatch(updateTask(id, updatedDescription)),
     removeTask: id => dispatch(removeTask(id)),
-    toggleEditor: id => dispatch(toggleEditor(id))
+    toggleEditor: id => dispatch(toggleEditor(id)),
+    clearAll: id => dispatch(clearAll())
   };
 };
 

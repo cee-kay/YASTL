@@ -7,8 +7,8 @@ const TaskEditor = ({ id, description, onAbortEditingClick, onSaveClick }) => {
   let input;
 
   return (
-    <Row style={{ marginTop: "8px", marginBottom: "8px" }}>
-      <Col xs="6">
+    <Row>
+      <Col sm={{ size: "4", offset: 3 }} className="row-overwrite">
         <input
           className="form-control"
           size="sm"
@@ -17,7 +17,7 @@ const TaskEditor = ({ id, description, onAbortEditingClick, onSaveClick }) => {
           ref={node => (input = node)}
         />
       </Col>
-      <Col xs="6">
+      <Col sm={{ size: "2" }} className="text-right row-overwrite">
         <ButtonGroup>
           <Button
             outline
